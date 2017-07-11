@@ -32,7 +32,7 @@
         "symfony/validator": "2.5.2",
         "fredjuvaux/doctrine-orm-provider": "1.0.*@dev",
         "fredjuvaux/silex-less-provider": "dev-master",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^6.3.0",
         "symfony/yaml": "^2.4",
         "deralex/yaml-config-service-provider": "1.0.x-dev"
 

@@ -3,7 +3,7 @@ Utilizing Silex with Doctrine ORM, and boostrap to get most popular PHP Repos
 Install:
 ```bash
 cd /path/to/your_project
-git clone git@github.com:fiifiappiah/populargithubphprepos.git
+git clone https://github.com/fiifiappiah/populargithubphprepos.git
 ```
 
 Run
