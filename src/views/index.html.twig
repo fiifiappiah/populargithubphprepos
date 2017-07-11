@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}List entities{% endblock title %}
+{% block description %}{% endblock description %}
+{% block h1 %}<h1>Top PHP Repo's on Github<a href="{{ path('update') }}" class="pull-right btn btn-default">Populate/Update</a></h1>{% endblock h1 %}
+
+{% block content %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+
+            {% for entity in entities %}
+            <tr>
+                {% set counter = ( counter | default(0) ) + 1 %}
+                <a href="/show">
+                    <th scope="row">{{ counter }}</th>
+                    <td><a href="{{ path('show', {id: entity.id}) }}">{{ entity.name }}</a></td>
+                    <td>{{ entity.description }}</td>
+                </a>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

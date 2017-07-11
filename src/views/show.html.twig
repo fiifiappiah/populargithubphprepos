@@ -1,0 +1,35 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{% endblock title %}
+{% block description %}{% endblock description %}
+{% block h1 %}
+    <div class="row">
+        <h4>
+            <a href="{{ path('index') }}"><<</a>
+        </h4>
+    </div>
+{% endblock h1 %}
+
+{% block content %}
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-block">
+            <h1 class="card-title">{{ entity.name }}</h1>
+
+            <p class="card-text">{{ entity.description }}</p>
+            <button type="button" class="btn btn-default btn-md">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{ entity.numOfStars|number_format }} Stars
+            </button>
+            <a href="{{ entity.url }}" class="btn btn-primary">Go to Github</a>
+        </div>
+        <div class="card-footer text-muted">
+            <h5>
+                Created: {{ entity.createdDate |date('Y-m-d H') }}
+            </h5>
+            <h5>
+                Last Push: {{ entity.lastPushDate |date('Y-m-d H:i:s') }}
+            </h5>
+        </div>
+    </div>
+{% endblock content %}
