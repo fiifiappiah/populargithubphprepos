@@ -33,8 +33,8 @@ database:
 
 github:
     auth:
-        - user
-        - pass
+        -
+        -
 ```
 
 Create database, then generate tables with Doctrine CLI tool
