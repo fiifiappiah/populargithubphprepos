@@ -1,6 +1,6 @@
 /phpunit.xml
 /vendor
 /build
-/composer.lock
+#/composer.lock
 /.idea
 
