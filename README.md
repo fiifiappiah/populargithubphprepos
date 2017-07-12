@@ -1,12 +1,21 @@
+# Top PHP Repo's on Github
 Utilizing Silex with Doctrine ORM, and boostrap to get most popular PHP Repos
 
-Install:
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+Composer (getcomposer.org)
+PHP 5.5+
+Mysql
+
+#### Installing:
 ```bash
-cd /path/to/your_project
 git clone https://github.com/fiifiappiah/populargithubphprepos.git
 ```
 
 Run
+```bash
 composer.phar install to install dependencies
 ```
 
@@ -26,4 +35,10 @@ php bin/console orm:schema-tool:update --force
 ```
 
 See Doctrine docs for additional documentation
+
+Application Routes
 ```bash
+/
+/update
+/show/{id}
+```
