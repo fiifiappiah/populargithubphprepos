@@ -1,6 +1,0 @@
-database:
-    driver: pdo_mysql
-    host: 127.0.0.1
-    dbname: cloud9gh_repolist
-    user: cloud9gh_repolis
-    password: passwork7
