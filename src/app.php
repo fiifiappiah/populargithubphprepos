@@ -7,7 +7,6 @@ use Silex\Provider\ServiceControllerServiceProvider;
 use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\DoctrineServiceProvider;
 use Silex\Provider\FormServiceProvider;
-use Silex\Provider\TranslationServiceProvider;
 use Silex\Provider\SessionServiceProvider;
 use Silex\Provider\HttpFragmentServiceProvider;
 use ORM\Provider\DoctrineORMServiceProvider;
@@ -22,14 +21,6 @@ $app->register(new TwigServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 
-$app->register(new TranslationServiceProvider(), array(
-    'translator.domains' => array(),
-));
-
-$app['twig'] = $app->share($app->extend('twig', function ($twig, $app) {
-    // add custom globals, filters, tags, ...
-    return $twig;
-}));
 
 $app->register(new GuzzleProvider(), array(
     'guzzle.request_options' =>

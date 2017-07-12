@@ -94,7 +94,7 @@ class BaseController implements ControllerProviderInterface {
             $repo->setRepoId($phpRepo->id);
             $repo->setCreatedDate($this->convertToDateTime($phpRepo->created_at));
             $repo->setName($phpRepo->name);
-            $repo->setUrl($phpRepo->url);
+            $repo->setUrl($phpRepo->html_url);
             $repo->setLastPushDate($this->convertToDateTime($phpRepo->pushed_at));
             $repo->setDescription((string) $phpRepo->description);
             $repo->setNumOfStars($phpRepo->stargazers_count);
