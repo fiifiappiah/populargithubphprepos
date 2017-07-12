@@ -21,17 +21,17 @@ $app->register(new TwigServiceProvider());
 $app->register(new FormServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
 
+$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/../config/param.yml'));
 
 $app->register(new GuzzleProvider(), array(
     'guzzle.request_options' =>
-        ['auth' => ['xxx', 'xxxx']]
+        $app['config']['github']['auth']
 ));
 
 $app->register(new SessionServiceProvider(), array(
   'session.storage.options' => array('cookie_lifetime' => 10800)
 ));
 
-$app->register(new DerAlex\Silex\YamlConfigServiceProvider(__DIR__ . '/../config/param.yml'));
 
 $app->register(new DoctrineServiceProvider(), array(
     'db.options' => $app['config']['database']

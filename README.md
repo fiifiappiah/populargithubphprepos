@@ -19,14 +19,22 @@ Run
 composer.phar install to install dependencies
 ```
 
-Set your Github keys or preferred authentication method
-$app->register(new GuzzleProvider(), array(
-    'guzzle.request_options' =>
-        ['auth' => ['xxx', 'xxxx']]
-));
-```
 
-Set your database information in config/param.yml:
+Set your database and github auth key information in config/param.yml:
+
+#### Example:
+```
+database:
+    driver: pdo_mysql
+    host: 127.0.0.1
+    dbname: repolist
+    user: notroot
+    password: NotRoot
+
+github:
+    auth:
+        - user
+        - pass
 ```
 
 Create database, then generate tables with Doctrine CLI tool
